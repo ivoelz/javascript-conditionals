@@ -26,17 +26,17 @@ $(document).ready(function () {
 
 
     function checkAge(event) {
-	    event.preventDefault()
+        event.preventDefault();
 
         // Get the user's birth year from the text
         // box with ID of "birthYear"
         var year = parseInt($("#birthYear").val());
 
-	    var age = 2020 - year;
+        var age = 2020 - year;
 
         // If they are currently under 18, print "Child"
         // to the <p> with ID of "birthYearOutput"
-        if (age < 18)
+        if(age < 18)
         {
             $("#birthYearOutput").text("Child");
         }
@@ -59,23 +59,23 @@ $(document).ready(function () {
         // Tax rates are: WI 5%, IL 8%, MN 7.5%, MI 5.5%
         if (state === 'WI')
         {
-            purchase * 0.05;
-            $("#salesTaxOutput").text(purchase.toFixed(2));
+            var salesTax = purchase * 0.05;
+            $("#salesTaxOutput").text(salesTax.toFixed(2));
         }
         else if (state === 'IL')
         {
-            purchase * 0.08;
-            $("#salesTaxOutput").text(purchase.toFixed(2));
+            var salesTax = purchase * 0.08;
+            $("#salesTaxOutput").text(salesTax.toFixed(2));
         }
         else if (state === 'MN')
         {
-            purchase * 0.075;
-            $("#salesTaxOutput").text(purchase.toFixed(2));
+            var salesTax = purchase * 0.075;
+            $("#salesTaxOutput").text(salesTax.toFixed(2));
         }
         else if (state === 'MI')
         {
-            purchase * 0.055;
-            $("#salesTaxOutput").text(purchase.toFixed(2));
+            var salesTax = purchase * 0.055;
+            $("#salesTaxOutput").text(salesTax.toFixed(2));
         }
         else
         {
